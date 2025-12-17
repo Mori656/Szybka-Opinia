@@ -1,4 +1,4 @@
-from form import Form
+from Classes.form import Form
 
 def main():
     form = Form()

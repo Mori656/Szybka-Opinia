@@ -8,10 +8,10 @@ from tkinter.ttk import Radiobutton, Checkbutton
 
 import openpyxl
 
-from betterComboBox import BetterComboBox
+from Classes.betterComboBox import BetterComboBox
 
 class Device:
-    paths = ['Ewidencja.xlsx', 'Log1.xlsx', 'Log2.xlsx', 'Log3.xlsx'] # Path to Log Export
+    paths = ['./Bazy_danych/Ewidencja.xlsx', './Bazy_danych/Log1.xlsx', './Bazy_danych/Log2.xlsx', './Bazy_danych/Log3.xlsx'] # Path to Log Export
     destroy_formula = ("Sprzęt zostaje zakwalifikowany do likwidacji ze "
                        "względu na niewspierany przez Microsoft system operacyjny, "
                        "podzespoły, które nie pozwalając na komfortową"

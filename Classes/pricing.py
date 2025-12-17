@@ -12,11 +12,11 @@ class Pricing:
         self.device = device
         self.info = info
 
-        folder_name = f"{'Wygenerowane_opinie/' + self.info['Nazwa pliku']}/Wycena_{self.device.info['Numer ewidencyjny']}"
+        folder_name = f"{'./Wygenerowane_opinie/' + self.info['Nazwa pliku']}/Wycena_{self.device.info['Numer ewidencyjny']}"
         os.mkdir(folder_name)
         path_to_folder = folder_name + '/'
         self.pricing_file_name = f"{path_to_folder}{pricing_file_name}"
-        self.pricing_page_path = "Cennik.pdf"      
+        self.pricing_page_path = "./Other_files/Cennik.pdf"      
         shutil.copy2(self.pricing_page_path, path_to_folder)
 
         thin_border = Border(

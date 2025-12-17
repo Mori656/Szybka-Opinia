@@ -52,7 +52,7 @@ class Opinion:
             for row in table.rows:
                 row.cells[i].width = width
 
-        table.cell(0, 0).paragraphs[0].add_run().add_picture('logo.png', width=Cm(1.88), height=Cm(1.35))
+        table.cell(0, 0).paragraphs[0].add_run().add_picture('./Other_files/logo.png', width=Cm(1.88), height=Cm(1.35))
 
         run = table.cell(0, 1).paragraphs[0].clear().add_run(
             f"Opinia dot. stanu technicznego sprzętu komputerowego nr {info['Numer opinii']}/{datetime.date.today().strftime('%Y')}"

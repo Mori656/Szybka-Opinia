@@ -5,9 +5,9 @@ from tkinter import ttk, messagebox
 
 import openpyxl
 
-from betterComboBox import BetterComboBox
-from device import Device
-from request import Request
+from Classes.betterComboBox import BetterComboBox
+from Classes.device import Device
+from Classes.request import Request
 from ttkwidgets.autocomplete import AutocompleteCombobox
 
 from style import apply_custom_style
@@ -22,11 +22,10 @@ class Form:
         "Autor": None,
         "Nazwa pliku": None,
     }
-    departments_path = "Departments.xlsx"
+    departments_path = "./Bazy_danych/Departments.xlsx"
     departments_codes_column = "Kod działu"
     departments_names_column = "Nazwa działu"
 
-    
     error_count = 0
 
     def __init__(self):

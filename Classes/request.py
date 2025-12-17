@@ -2,8 +2,8 @@ from tkinter import ttk, messagebox
 from tkinter.ttk import Frame, Label, Button, Entry
 import tkinter as tk
 
-from opinion import Opinion
-from pricing import Pricing
+from Classes.opinion import Opinion
+from Classes.pricing import Pricing
 
 
 class Request:
