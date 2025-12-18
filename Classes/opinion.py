@@ -3,15 +3,14 @@ import datetime
 from  docx import Document
 import os
 from docx.shared import Inches, Cm, Pt
-from openpyxl import Workbook
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 class Opinion:
-    def __init__(self,info, devices):
+    def __init__(self,info, devices,path_to_folder=None):
         name = info["Nazwa pliku"]
-        self.path_to_folder = './Wygenerowane_opinie'
+        self.path_to_folder = path_to_folder if path_to_folder is not None else './Wygenerowane_opinie'
         self.devices = devices
 
         months = {

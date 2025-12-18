@@ -1,11 +1,10 @@
 import datetime
-from openpyxl.styles import numbers, Font, Alignment, PatternFill, Border, Side
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 import os
 import shutil
 
 from openpyxl.utils import get_column_letter
 from openpyxl.workbook import Workbook
-from openpyxl.workbook.properties import CalcProperties
 
 class Pricing:
     def __init__(self, info, device, pricing_file_name):

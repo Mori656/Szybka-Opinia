@@ -1,5 +1,5 @@
 from tkinter import ttk, messagebox
-from tkinter.ttk import Frame, Label, Button, Entry
+from tkinter.ttk import Button
 import tkinter as tk
 
 from Classes.opinion import Opinion
