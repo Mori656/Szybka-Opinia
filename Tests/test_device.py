@@ -100,18 +100,7 @@ class TestDeviceIntegration(unittest.TestCase):
             "Producent": ""
         }
 
-        print(f"\n--- PRZED findDataByKey ---")
-        print(f"device.info przed: {device.info}")
-        print(f"device.paths: {device.paths}")
-        print(f"field_id.get(): {device.field_id.get()}")
-
         found = device.findDataByKey("Numer ewidencyjny")
-
-        print(f"\n--- PO findDataByKey ---")
-        print(f"found (zwrócono): {found}")
-        print(f"device.info po: {device.info}")
-        print(f"'Producent' w found? {'Producent' in found}")
-        print(f"device.info['Producent']: {device.info['Producent']}")
 
         self.assertIn("Producent", found)
         self.assertEqual(device.info["Producent"], "Dell")
