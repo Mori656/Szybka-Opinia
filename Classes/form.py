@@ -8,7 +8,6 @@ import openpyxl
 from Classes.betterComboBox import BetterComboBox
 from Classes.device import Device
 from Classes.request import Request
-from ttkwidgets.autocomplete import AutocompleteCombobox
 
 from style import apply_custom_style
 
@@ -99,7 +98,6 @@ class Form:
         label = ttk.Label(self.right_frame, text="Dział:")
         label.pack(pady=(15, 5), anchor="w", padx=10)
         options = self.get_departments()
-        print(options)
         combo = BetterComboBox(self.right_frame,
                                completevalues=options,
                                listbox_bg="#2e2e3e",

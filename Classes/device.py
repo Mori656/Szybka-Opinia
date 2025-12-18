@@ -2,8 +2,7 @@ import datetime
 import tkinter as tk
 import os
 from dataclasses import fields
-from logging import disable
-from tkinter import ttk, Label, Entry, messagebox
+from tkinter import ttk, messagebox
 from tkinter.ttk import Radiobutton, Checkbutton
 
 import openpyxl
@@ -11,7 +10,8 @@ import openpyxl
 from Classes.betterComboBox import BetterComboBox
 
 class Device:
-    paths = ['./Bazy_danych/Ewidencja.xlsx', './Bazy_danych/Log1.xlsx', './Bazy_danych/Log2.xlsx', './Bazy_danych/Log3.xlsx'] # Path to Log Export
+    paths_folder = "./Bazy_danych/"
+    paths = ['Ewidencja.xlsx', 'Log1.xlsx', 'Log2.xlsx', 'Log3.xlsx'] # Path to Log Export
     destroy_formula = ("Sprzęt zostaje zakwalifikowany do likwidacji ze "
                        "względu na niewspierany przez Microsoft system operacyjny, "
                        "podzespoły, które nie pozwalając na komfortową"
@@ -148,8 +148,8 @@ class Device:
             print("Sprawdzam ",path, search_key)
             czyPlik = False
             try:
-                if os.path.exists(path):
-                    wb = openpyxl.load_workbook(path)
+                if os.path.exists(self.paths_folder + path):
+                    wb = openpyxl.load_workbook(self.paths_folder + path)
                     print("Plik otwarty poprawnie.")
                     czyPlik = True
                 else:
@@ -175,6 +175,8 @@ class Device:
                     print("ta kolumna",target_column)
                 elif key not in self.info.keys():
                     self.info[key] = None  # pozwalamy na dodatkowe pola
+            
+            print(self.info)
             print("sprawdzam kolumne")
             if target_column:
                 for row in range(2, sheet.max_row + 1):
