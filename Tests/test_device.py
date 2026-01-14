@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import MagicMock, patch
 from Classes.device import Device
 
-
+# Testy jednostkowe dla klasy Device
 class TestDeviceUnit(unittest.TestCase):
 
     @patch("tkinter.Frame")
@@ -60,7 +60,7 @@ class TestDeviceUnit(unittest.TestCase):
         self.assertEqual(self.device.info["Producent"], "TEST")
         self.assertEqual(self.device.info["Formula"], "FORMULA")
 
-
+# Testy integracyjne dla klasy Device
 class TestDeviceIntegration(unittest.TestCase):
 
     @patch("tkinter.Frame")
